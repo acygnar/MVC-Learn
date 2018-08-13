@@ -1,0 +1,21 @@
+﻿@model WebSiteDB.Models.Clients
+@{
+
+	ViewData["Title"] = "Contact";
+}
+<div class="content">
+	<div class="contact">
+		<h2>Kontakt</h2>
+		<span>Adrian Cygnar</span><br/>
+		<span>tel.792333814</span>
+	</div>
+	<div class="form">
+		@using (Html.BeginForm("Contact", "Contact"))
+			{
+		@Html.EditorFor(m=>m)
+			<input type="submit" value="Wyślij"/>
+			}
+			
+		
+	</div>
+</div>

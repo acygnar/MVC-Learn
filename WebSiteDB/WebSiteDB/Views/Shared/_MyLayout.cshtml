@@ -1,0 +1,37 @@
+﻿
+@{
+	ViewData["Title"] = "Portfolio Adrian Cygnar";
+	ViewData["Author"] = "Adrian Cygnar";
+	ViewData["Date"] = DateTime.Now.Year;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ViewData["Title"]</title>
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/css/mysite.css">
+</head>
+<body>
+	<div class="logo">
+		<img src="~/images/test.png" />
+	</div>
+	<nav class="navigation">
+		<div class="navlist">
+				<ul>
+					<li><a asp-area="" asp-controller="About" asp-action="About">O mnie</a></li>
+					<li><a asp-area="" asp-controller="Projects" asp-action="Projects">Projekty</a></li>
+					<li><a asp-area="" asp-controller="Contact" asp-action="Contact">Kontakt</a></li>
+				</ul>
+			</div>
+		</nav>
+	<div class="container body-content">
+		@RenderBody()
+	</div>
+	<div class="footer">
+		<hr />
+		<footer>
+			<p>&copy; @ViewData["Date"] - @ViewData["Author"]</p>
+		</footer>
+	</div>
+</body>
+</html>

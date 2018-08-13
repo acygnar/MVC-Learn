@@ -1,0 +1,74 @@
+﻿html {
+	font-family: PT Sans;
+
+}
+body {
+	background-color: #888888;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.navlist ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #0079d4;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.navlist li {
+	float: left;
+}
+
+.navlist li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14% 16px;
+	text-decoration: none;
+}
+
+.navlist li a:hover {
+	background-color: #006fbd;
+	}
+.content {
+	padding-top:5%;
+}
+.aboutme {
+	padding-left: 33%;
+	padding-right: 33%;
+	font-family: sans-serif;
+	text-align: justify;
+	text-justify: inter-word;
+	font-size:18px;
+}
+.logo {
+width:100%;
+background-color:white;
+clear:both;
+margin-top:45px;
+
+}
+.skills {
+text-align:center;
+}
+.skillsimg {
+margin-top:5%;
+
+}
+.form {
+margin-left:2%;
+margin-top:2%;
+}
+.contact span {
+font-weight:bold;
+font-family:Times New Roman;
+margin-left:2%;
+
+}
+.contact h2 {
+margin-left:1%;
+}
