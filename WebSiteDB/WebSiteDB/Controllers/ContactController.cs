@@ -16,7 +16,15 @@ namespace WebSiteDB.Controllers
         [HttpPost]
         public ActionResult Contact(Clients clients )
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View("contact", clients);
+            }
+            else
+            {
+
+                return View("ContactSend");
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	font-size:24px;
 }
 
 .navlist li {
@@ -35,7 +36,7 @@ body {
 	background-color: #006fbd;
 	}
 .content {
-	padding-top:5%;
+	padding-top:10%;
 }
 .aboutme {
 	padding-left: 33%;
@@ -45,13 +46,7 @@ body {
 	text-justify: inter-word;
 	font-size:18px;
 }
-.logo {
-width:100%;
-background-color:white;
-clear:both;
-margin-top:45px;
 
-}
 .skills {
 text-align:center;
 }
@@ -71,4 +66,10 @@ margin-left:2%;
 }
 .contact h2 {
 margin-left:1%;
+}
+.field-validation-error {
+color: #9d0404;
+}
+.navtext {
+padding-top:1%;
 }
