@@ -24,9 +24,10 @@ namespace WebSiteDB.Models
         public string email { get; set; }
         [Display(Name = "Numer telefonu")]/// Wprowadzic wyrazenie regularne 
         public string phonenumber { get; set; }
-        [Display(Name = "Pytanie")]
+        [Display(Name = "Wiadomość")]
+        [Required(ErrorMessage = "Wpisz treść wiadomości")]
         [DataType(DataType.MultilineText)]
-        public string question { get; set; }
+        public string message { get; set; }
 
     }
 }

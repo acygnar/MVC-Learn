@@ -10,12 +10,13 @@
 		<span>tel.792333814</span>
 	</div>
 	<div class="form">
-		@using (Html.BeginForm("Contact", "Contact"))
-			{
-		@Html.EditorFor(m=>m)
-			<input type="submit" value="Wyślij"/>
-			}
+		@using (Html.BeginForm("Contact", "Contact", FormMethod.Post)) 
 			
-		
+		{
+		@Html.EditorFor(m => m)
+		<input type="submit" value="Wyślij" />
+		}
+
+
 	</div>
 </div>

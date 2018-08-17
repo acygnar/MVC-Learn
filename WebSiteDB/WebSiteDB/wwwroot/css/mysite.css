@@ -73,3 +73,36 @@ color: #9d0404;
 .navtext {
 padding-top:1%;
 }
+
+navlist.opacity {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #0079d4;
+	opacity:0.4;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-size: 24px;
+}
+navlist.opacity li a {
+	display: block;
+	color: white;
+	opacity:0.4;
+	text-align: center;
+	padding: 14% 16px;
+	text-decoration: none;
+}
+navlist.opacity ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #0079d4;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-size: 24px;
+	opacity:0.4;
+}

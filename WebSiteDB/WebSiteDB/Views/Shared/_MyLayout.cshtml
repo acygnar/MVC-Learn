@@ -10,6 +10,17 @@
 	<title>@ViewData["Title"]</title>
 	<title>@ViewData["Title"]</title>
 	<link rel="stylesheet" href="~/css/mysite.css">
+	<script src="htpps://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(window).on('scroll', function () {
+			if ($window.scrollTop()) {
+				$('navlist').addClass(opacity);
+			}
+			else { 
+				$('navlist').removeClass(opacity);
+			}
+		})
+		</script>
 </head>
 <body>
 	<nav class="navigation">
