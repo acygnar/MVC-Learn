@@ -1,0 +1,63 @@
+﻿
+@{
+	ViewData["Title"] = "_TutorialLayaut";
+}
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/css/Tutorial.css" />
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<nav>
+				<div class="menu-icon">
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
+				<div class="logo">
+					<img src="~/images/Logo.png" />
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a asp-area="" asp-controller="About" asp-action="About">O mnie</a></li>
+						<li><a asp-area="" asp-controller="Projects" asp-action="Projects">Projekty</a></li>
+						<li><a asp-area="" asp-controller="Contact" asp-action="Contact">Kontakt</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		
+		<div class="content">
+			@RenderBody()
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$(".menu-icon").on("click", function () {
+				$("nav ul").toggleClass("showing");
+			});
+		});
+
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				if ($(document).scrollTop() > 50) {
+					$("nav").addClass("black");
+				} else {
+					$("nav").removeClass("black");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

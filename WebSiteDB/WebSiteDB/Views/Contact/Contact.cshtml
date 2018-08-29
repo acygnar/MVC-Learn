@@ -10,12 +10,19 @@
 		<span>tel.792333814</span>
 	</div>
 	<div class="form">
-		@using (Html.BeginForm("Contact", "Contact", FormMethod.Post)) 
-			
-		{
-		@Html.EditorFor(m => m)
-		<input type="submit" value="Wyślij" />
-		}
+		<form method="post" asp-controller="Contact" asp-action="Contact" class="form-signin">
+			<label asp-for="name" class="sr-only" runat="srver">Imię</label>
+			<input asp-for="name" id="name" name="name" class="form-control" placeholder="Podaj imię" required="" runat="server" type="text"><br />
+			<label asp-for="surname" class="sr-only">Nazwisko</label>
+			<input asp-for="surname" id="surname" name="surname" class="form-control" placeholder="Podaj nazwisko" required="" type="text"><br />
+			<label asp-for="email" class="sr-only">Email</label>
+			<input asp-for="email" id="email" name="email" class="form-control" placeholder="Podaj email" required="" type="text"><br />
+			<label asp-for="phonenumber" class="sr-only">Numer telefonu</label>
+			<input asp-for="phonenumber" id="phonenumber" name="phonenumber" class="form-control" placeholder="Podaj numer telefonu" required="" type="text"><br />
+			<label asp-for="message" class="sr-only">Wiadomość</label>
+			<input asp-for="message" id="message" name="message" class="form-control" placeholder="Podaj treść wiadomości" required="" type="text"><br />
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Wyślij</button>
+		</form>
 
 
 	</div>

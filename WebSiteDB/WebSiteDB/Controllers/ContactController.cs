@@ -17,7 +17,13 @@ namespace WebSiteDB.Controllers
         }
         [HttpPost]
         public ActionResult Contact(Clients clients)
+           
         {
+            string name = HttpContext.Request.Form["name"];
+            string surname = HttpContext.Request.Form["surname"];
+            string email = HttpContext.Request.Form["email"];
+            string phonenumber = HttpContext.Request.Form["phonenumber"];
+            string message = HttpContext.Request.Form["message"];
             if (!ModelState.IsValid)
             {
                 return View("contact", clients);
@@ -31,7 +37,7 @@ namespace WebSiteDB.Controllers
                 try
                 {
                     MySqlCommand cmdSend = connection.CreateCommand();
-                    ///cmdSend.CommandText = ("INSERT INTO clients (name,surname,email,phonenumber,message) VALUES ('" + name.Value + "','" + surname.Text + "','" + email.Text + "','" + phonenumber.Text + "','" + message.Text + "')");
+                   cmdSend.CommandText = ("INSERT INTO clients (name,surname,email,phonenumber,message) VALUES ('" + name + "','" + surname + "','" + email + "','" + phonenumber + "','" + message + "')");
                     cmdSend.ExecuteNonQuery();
                 }
                 catch (Exception)

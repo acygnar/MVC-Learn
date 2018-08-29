@@ -8,7 +8,6 @@
 <html>
 <head>
 	<title>@ViewData["Title"]</title>
-	<title>@ViewData["Title"]</title>
 	<link rel="stylesheet" href="~/css/mysite.css">
 	<script src="htpps://code.jquery.com/jquery-3.2.1.js"></script>
 	<script type="text/javascript">
@@ -16,13 +15,14 @@
 			if ($window.scrollTop()) {
 				$('navlist').addClass(opacity);
 			}
-			else { 
+			else {
 				$('navlist').removeClass(opacity);
 			}
 		})
-		</script>
+	</script>
 </head>
 <body>
+	<header>
 	<nav class="navigation">
 		<div class="navlist">
 
@@ -38,6 +38,7 @@
 			</ul>
 		</div>
 	</nav>
+		</header>
 	<div class="container body-content">
 		@RenderBody()
 	</div>
