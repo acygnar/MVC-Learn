@@ -1,0 +1,29 @@
+﻿@model WebSiteDB.Models.Clients
+@{
+
+	ViewData["Title"] = "Contact";
+}
+<div class="content">
+	<div class="contact">
+		<h2>Kontakt</h2>
+		<span>Adrian Cygnar</span><br/>
+		<span>tel.792333814</span>
+	</div>
+	<div class="form">
+		<form method="post" asp-controller="Contact" asp-action="Contact" class="form-signin">
+			<label asp-for="name" class="sr-only" runat="srver">Imię</label>
+			<input asp-for="name" id="name" name="name" class="form-control" placeholder="Podaj imię" required="" runat="server" type="text"><br />
+			<label asp-for="surname" class="sr-only">Nazwisko</label>
+			<input asp-for="surname" id="surname" name="surname" class="form-control" placeholder="Podaj nazwisko" required="" type="text"><br />
+			<label asp-for="email" class="sr-only">Email</label>
+			<input asp-for="email" id="email" name="email" class="form-control" placeholder="Podaj email" required="" type="text"><br />
+			<label asp-for="phonenumber" class="sr-only">Numer telefonu</label>
+			<input asp-for="phonenumber" id="phonenumber" name="phonenumber" class="form-control" placeholder="Podaj numer telefonu" required="" type="text"><br />
+			<label asp-for="message" class="sr-only">Wiadomość</label>
+			<input asp-for="message" id="message" name="message" class="form-control" placeholder="Podaj treść wiadomości" required="" type="text"><br />
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Wyślij</button>
+		</form>
+
+
+	</div>
+</div>

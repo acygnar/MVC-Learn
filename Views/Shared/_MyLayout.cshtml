@@ -1,0 +1,52 @@
+﻿
+@{
+	ViewData["Title"] = "Portfolio Adrian Cygnar";
+	ViewData["Author"] = "Adrian Cygnar";
+	ViewData["Date"] = DateTime.Now.Year;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/css/mysite.css">
+	<script src="htpps://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$(window).on('scroll', function () {
+			if ($window.scrollTop()) {
+				$('navlist').addClass(opacity);
+			}
+			else {
+				$('navlist').removeClass(opacity);
+			}
+		})
+	</script>
+</head>
+<body>
+	<header>
+	<nav class="navigation">
+		<div class="navlist">
+
+			<ul>
+				<li>
+					<div class="logo">
+						<img src="~/images/Logo.png" />
+					</div>
+				</li>
+				<li class="navtext"><a asp-area="" asp-controller="About" asp-action="About">O mnie</a></li>
+				<li class="navtext"><a asp-area="" asp-controller="Projects" asp-action="Projects">Projekty</a></liclass="navtext">
+				<li class="navtext"><a asp-area="" asp-controller="Contact" asp-action="Contact">Kontakt</a></li>
+			</ul>
+		</div>
+	</nav>
+		</header>
+	<div class="container body-content">
+		@RenderBody()
+	</div>
+	<div class="footer">
+		<hr />
+		<footer>
+			<p>&copy; @ViewData["Date"] - @ViewData["Author"]</p>
+		</footer>
+	</div>
+</body>
+</html>
